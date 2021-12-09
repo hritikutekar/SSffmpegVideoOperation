@@ -178,7 +178,7 @@ public class FFmpegQueryExtension {
         return inputs.toArray(arrayOfNulls<String>(inputs.size))
     }
 
-    fun compressor(inputVideo: String, width: Int?, height: Int?, startTime: String?, endTime: String?, outputVideo: String): Array<String> {
+    fun compressor(inputVideo: String, width: Int?, height: Int?, outputVideo: String, startTime: String? = null, endTime: String?  = null): Array<String> {
         Common.getFrameRate(inputVideo)
         val inputs: ArrayList<String> = ArrayList()
         // "-i", videoPath, "-vcodec", "h264", "-b:v", "1000k", "-acodec", "mp3" ,"-preset", "ultrafast", outputPath
