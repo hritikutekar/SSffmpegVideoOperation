@@ -181,18 +181,18 @@ public class FFmpegQueryExtension {
     fun compressor(inputVideo: String, width: Int?, height: Int?, outputVideo: String): Array<String> {
         Common.getFrameRate(inputVideo)
         val inputs: ArrayList<String> = ArrayList()
+        // "-i", videoPath, "-vcodec", "h264", "-b:v", "1000k", "-acodec", "mp3" ,"-preset", "ultrafast", outputPath
         inputs.apply {
-            add("-y")
             add("-i")
             add(inputVideo)
-            add("-c:v")
-            add("libx264")
+            add("-vcodec")
+            add("h264")
+            add("-b:v")
+            add("1000k")
+            add("-acodec")
+            add("mp3")
             add("-preset")
             add("ultrafast")
-            add("-c:a")
-            add("aac")
-            add("-max_muxing_queue_size")
-            add("1024")
             add(outputVideo)
         }
         return inputs.toArray(arrayOfNulls<String>(inputs.size))
