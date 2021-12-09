@@ -187,7 +187,7 @@ public class FFmpegQueryExtension {
             add("-ss")
             add(startTime.toString())
             add("-s")
-            add("1280x720")
+            add("854x480")
             add("-r")
             add("30")
             add("-vcodec")
