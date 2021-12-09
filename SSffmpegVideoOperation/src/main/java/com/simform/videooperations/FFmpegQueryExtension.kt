@@ -193,7 +193,7 @@ public class FFmpegQueryExtension {
             add("-vcodec")
             add("mpeg4")
             add("-b:v")
-            add("1000k")
+            add("1500k")
             add("-b:a")
             add("48000")
             add("-ac")
