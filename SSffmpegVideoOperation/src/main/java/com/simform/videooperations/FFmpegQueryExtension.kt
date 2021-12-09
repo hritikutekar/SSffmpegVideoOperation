@@ -190,7 +190,7 @@ public class FFmpegQueryExtension {
             add("-b:v")
             add("1000k")
             add("-acodec")
-            add("acc")
+            add("aac")
             add("-preset")
             add("ultrafast")
             add(outputVideo)
